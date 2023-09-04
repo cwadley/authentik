@@ -2307,11 +2307,7 @@ paths:
       - mobile_device_token: []
       responses:
         '204':
-          content:
-            application/json:
-              schema:
-                type: string
-          description: ''
+          description: Key successfully set
         '400':
           content:
             application/json:
@@ -30023,6 +30019,9 @@ components:
           additionalProperties: {}
         duo:
           type: integer
+        mobile:
+          type: string
+          minLength: 1
     AuthenticatorWebAuthnChallenge:
       type: object
       description: WebAuthn Challenge
@@ -30925,6 +30924,7 @@ components:
       - webauthn
       - duo
       - sms
+      - mobile
       type: string
       description: |-
         * `static` - Static
@@ -30932,6 +30932,7 @@ components:
         * `webauthn` - WebAuthn
         * `duo` - Duo
         * `sms` - SMS
+        * `mobile` - authentik Mobile
     DigestAlgorithmEnum:
       enum:
       - http://www.w3.org/2000/09/xmldsig#sha1
