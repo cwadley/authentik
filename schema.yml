@@ -30175,7 +30175,6 @@ components:
           items:
             $ref: '#/components/schemas/FooterLink'
           readOnly: true
-          default: []
         ui_theme:
           allOf:
           - $ref: '#/components/schemas/UiThemeEnum'
