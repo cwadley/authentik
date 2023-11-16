@@ -1292,9 +1292,9 @@ Django = ">=2.1,<4.3"
 
 [package.source]
 type = "git"
-url = "https://github.com/hho6643/django-tenants.git"
-reference = "hho6643-psycopg3_fixes"
-resolved_reference = "0895db487811d9864be79ce35fdf88c92ed5fac7"
+url = "https://github.com/rissson/django-tenants.git"
+reference = "authentik-fixes"
+resolved_reference = "31040e911d00a96e9379860d48f458c2b222afc1"
 
 [[package]]
 name = "djangorestframework"
@@ -4534,4 +4534,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "b291783b9f29a2fba3fe155d6e593bfdf3a8058992c4675a4098780f25fe76b5"
+content-hash = "036dc2dd3fbb00ea1ef9495fe90f15e5a126fedcea33634887afbfce2ad7d012"
