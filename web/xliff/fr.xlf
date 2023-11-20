@@ -7978,6 +7978,9 @@ Les liaisons avec les groupes/utilisateurs sont vérifiées par rapport à l'uti
 <trans-unit id="s52bdc80690a9a8dc">
   <source>When enabled, the stage will always accept the given user identifier and continue.</source>
 </trans-unit>
+<trans-unit id="s7513372fe60f6387">
+  <source>Event volume</source>
+</trans-unit>
     </body>
   </file>
 </xliff>
