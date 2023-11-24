@@ -1,4 +1,5 @@
 """Duo stage"""
+import hashlib
 from os.path import isfile
 from typing import Optional
 
@@ -19,7 +20,7 @@ from authentik.stages.authenticator.models import Device
 HOST_CA_CERTS = "/etc/ssl/certs/ca-certificates.crt"
 if not isfile(HOST_CA_CERTS):
     HOST_CA_CERTS = None
-    
+
 class AuthenticatorDuoStage(ConfigurableStage, FriendlyNamedStage, Stage):
     """Setup Duo authenticator devices"""
 
@@ -51,6 +52,8 @@ class AuthenticatorDuoStage(ConfigurableStage, FriendlyNamedStage, Stage):
             self.api_hostname,
             user_agent=authentik_user_agent(),
             ca_certs=HOST_CA_CERTS,
+            sig_version=2,
+            digestmod=hashlib.sha1,
         )
 
     def admin_client(self) -> Admin:
@@ -63,6 +66,8 @@ class AuthenticatorDuoStage(ConfigurableStage, FriendlyNamedStage, Stage):
             self.api_hostname,
             user_agent=authentik_user_agent(),
             ca_certs=HOST_CA_CERTS,
+            sig_version=2,
+            digestmod=hashlib.sha1,
         )
         return client
 
